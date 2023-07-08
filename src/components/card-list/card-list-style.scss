@@ -1,0 +1,35 @@
+// card-list.styles.css
+$card-color: #fbc932;
+.cardList {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  @media screen and (max-width: 1140px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: $card-color;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 25px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
